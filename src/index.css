@@ -9,6 +9,7 @@ body {
   font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #160007;
 }
 
 @font-face {
@@ -18,4 +19,46 @@ body {
 
 h1,h2,h3 {
 font-family:'sunsetclub', cursive;
+}
+
+.pizzarollslow {
+  animation: rotate 120s infinite linear;
+}
+
+.pizzarollquick {
+  animation: rotate 90s infinite linear;
+}
+
+@keyframes rotate{
+  from{ transform: rotate(-360deg); }
+  to{ transform: rotate(360deg); }
+}
+
+.pizzacard {
+  background: linear-gradient(180deg, rgba(77, 7, 20, 0.2) 0%, rgba(255, 24, 66, 0) 45.42%), #FFF5F7;
+}
+
+.pizzashadow {
+  filter: drop-shadow(11.4333px 11.4333px 22.8667px rgba(89, 31, 41, 0.25)) drop-shadow(-11.4333px -11.4333px 22.8667px rgba(255, 118, 141, 0.25));
+}
+
+.innershadow {
+  animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+    0 0 7px #ffbac7,
+    0 0 10px #ffbac7,
+    0 0 21px #ffbac7,
+    0 0 60px #FF1842,
+    0 0 70px #FF1842,
+    0 0 80px #FF1842,
+    0 0 90px #FF1842,
+    0 0 100px #FF1842;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
 }
