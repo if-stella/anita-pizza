@@ -27,6 +27,7 @@ font-family:'sunsetclub', cursive;
 
 .pizzarollquick {
   animation: rotate 90s infinite linear;
+
 }
 
 @keyframes rotate{
@@ -39,7 +40,7 @@ font-family:'sunsetclub', cursive;
 }
 
 .pizzashadow {
-  filter: drop-shadow(11.4333px 11.4333px 22.8667px rgba(89, 31, 41, 0.25)) drop-shadow(-11.4333px -11.4333px 22.8667px rgba(255, 118, 141, 0.25));
+  filter: drop-shadow(18px 18px 36px rgba(89, 31, 41, 0.5)) drop-shadow(-12px -12px 24px rgba(255, 118, 141, 0.5));
 }
 
 .innershadow {
@@ -61,4 +62,107 @@ font-family:'sunsetclub', cursive;
   20%, 24%, 55% {
     text-shadow: none;
   }
+}
+
+@keyframes still {
+  from {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+  }
+  to {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(45deg);
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(0deg);
+  }
+  to {
+    transform: rotateX(60deg) rotateY(0deg) rotateZ(360deg);
+  }
+}
+
+.pizza-box {
+  animation: spin 5s infinite linear;
+  background: #fff;
+  box-shadow: 0 0 6vh 2vh rgba(0, 0, 0, 0.4) inset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30vh;
+  width: 30vh;
+  transform-style: preserve-3d;
+}
+
+.lid-underside,
+.lid {
+  background-color: #f6f6f6;
+  box-shadow: 0 0 4vh 1vh rgba(0, 0, 0, 0.2) inset;
+  height: 30vh;
+  width: 30vh;
+  position: absolute;
+  transform: rotateX(86deg) translateY(3.9vh) translateZ(0.2vh);
+  transform-origin: top center;
+  transition: transform 0.3s ease-in;
+  z-index: 1;
+}
+
+.lid-underside {
+  background-color: #dedede;
+  transform: rotateX(86deg) translateY(4vh) translateZ(0.1vh);
+}
+
+.pizza-box:hover .lid {
+  transform: rotateX(0deg) translateY(0) translateZ(4vh);
+}
+
+.pizza-box:hover .lid-underside {
+  transform: rotateX(0deg) translateY(0) translateZ(3.9vh);
+}
+
+.pizza-box-side {
+  background-color: #f6f6f6;
+  box-shadow: 0 0 4vh 1vh rgba(0, 0, 0, 0.2) inset;
+  height: 4vh;
+  position: absolute;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  width: 30vh;
+}
+.front-side {
+  background: linear-gradient(to right, rgba(214,214,214,1) 0%,rgba(246,246,246,1) 15%,rgba(246,246,246,1) 100%);
+  transform: translateY(-13vh) rotateX(90deg);
+}
+.back-side {
+  background-color: #bbb;
+  bottom: -4vh;
+}
+.left-side {
+  background-color: #ccc;
+  transform: rotateX(90deg) rotateY(90deg) rotateZ(0deg) translateX(-13vh);
+  transform-origin: 0 top;
+}
+.right-side {
+  background-color: #ddd;
+  bottom: -4vh;
+  transform: rotateX(90deg) rotateY(90deg) rotateZ(0deg);
+  transform-origin: 100% top;
+}
+
+.logo {
+  background: url("https://res.cloudinary.com/djlggawlm/image/upload/v1666463296/Anita%20Pizza/oven_fresh_wknhz6.png");
+  height: 40vh;
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+.pizza {
+  background: url("https://res.cloudinary.com/djlggawlm/image/upload/v1666450897/Anita%20Pizza/Pizzaswitch_euwnap.png");
+  background-size:cover;
+  border-radius: 50%;
+  box-shadow: 0 0 1.8vh 1.5vh rgb(173, 117, 81) inset;
+  display: block;
+  height: 28vh;
+  width: 28vh;
+  padding: 4vh;
+  transform-style: preserve-3d;
 }
