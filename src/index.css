@@ -40,7 +40,7 @@ font-family:'sunsetclub', cursive;
 }
 
 .pizzashadow {
-  filter: drop-shadow(18px 18px 36px rgba(89, 31, 41, 0.5)) drop-shadow(-12px -12px 24px rgba(255, 118, 141, 0.5));
+  filter: drop-shadow(18px 18px 36px rgba(89, 31, 41, 0.5)) drop-shadow(-20px -20px 40px rgba(255, 118, 141, 0.5));
 }
 
 .innershadow {
@@ -82,14 +82,14 @@ font-family:'sunsetclub', cursive;
 }
 
 .pizza-box {
-  animation: spin 5s infinite linear;
+  animation: spin 9s infinite linear;
   background: #fff;
   box-shadow: 0 0 6vh 2vh rgba(0, 0, 0, 0.4) inset;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30vh;
-  width: 30vh;
+  height: 40vh;
+  width: 40vh;
   transform-style: preserve-3d;
 }
 
@@ -97,8 +97,8 @@ font-family:'sunsetclub', cursive;
 .lid {
   background-color: #f6f6f6;
   box-shadow: 0 0 4vh 1vh rgba(0, 0, 0, 0.2) inset;
-  height: 30vh;
-  width: 30vh;
+  height: 40vh;
+  width: 40vh;
   position: absolute;
   transform: rotateX(86deg) translateY(3.9vh) translateZ(0.2vh);
   transform-origin: top center;
@@ -126,11 +126,11 @@ font-family:'sunsetclub', cursive;
   position: absolute;
   transform: rotateX(90deg);
   transform-origin: top;
-  width: 30vh;
+  width: 40vh;
 }
 .front-side {
   background: linear-gradient(to right, rgba(214,214,214,1) 0%,rgba(246,246,246,1) 15%,rgba(246,246,246,1) 100%);
-  transform: translateY(-13vh) rotateX(90deg);
+  transform: translateY(-18vh) rotateX(90deg);
 }
 .back-side {
   background-color: #bbb;
@@ -138,7 +138,7 @@ font-family:'sunsetclub', cursive;
 }
 .left-side {
   background-color: #ccc;
-  transform: rotateX(90deg) rotateY(90deg) rotateZ(0deg) translateX(-13vh);
+  transform: rotateX(90deg) rotateY(90deg) rotateZ(0deg) translateX(-18vh);
   transform-origin: 0 top;
 }
 .right-side {
@@ -159,10 +159,10 @@ font-family:'sunsetclub', cursive;
   background: url("https://res.cloudinary.com/djlggawlm/image/upload/v1666450897/Anita%20Pizza/Pizzaswitch_euwnap.png");
   background-size:cover;
   border-radius: 50%;
-  box-shadow: 0 0 1.8vh 1.5vh rgb(173, 117, 81) inset;
+  box-shadow: 0 0 2vh 1.5vh rgb(173, 117, 81) inset;
   display: block;
-  height: 28vh;
-  width: 28vh;
+  height: 36vh;
+  width: 36vh;
   padding: 4vh;
   transform-style: preserve-3d;
 }
