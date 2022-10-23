@@ -1,5 +1,4 @@
 import React from 'react'
-import {data} from '../data/data.js'
 
 const Pizzacard = ({item}) => {
   return (
@@ -12,8 +11,8 @@ const Pizzacard = ({item}) => {
         className={`${item.class} h-[280px] sm:h-[240px] md:h-[200px] lg:h-[206px] xl:h-[260px] w-[280px] sm:w-[240px] md:w-[200px] lg:w-[206px] xl:w-[260px] block mx-auto`}
       />
     </div>
-    <div className="absolute top-[-124px] sm:top-[-100px] md:top-[-80px] lg:top-[-83px] xl:top-[-110px] w-full">
-      <div className="pizzashadow mx-auto h-[240px] sm:h-[200px] md:h-[160px] lg:h-[166px] xl:h-[220px] w-[240px] sm:w-[200px] md:w-[160px] lg:w-[166px] xl:w-[220px] bg-[#E5D1D5] rounded-full"></div>
+    <div className="absolute top-[-114px] sm:top-[-90px] md:top-[-70px] lg:top-[-73px] xl:top-[-100px] w-full">
+      <div className="pizzashadow mx-auto h-[220px] sm:h-[180px] md:h-[140px] lg:h-[146px] xl:h-[200px] w-[220px] sm:w-[180px] md:w-[140px] lg:w-[146px] xl:w-[200px] bg-[#E5D1D5] rounded-full"></div>
     </div>
       <div className="px-4 pt-4 pb-12 lg:px-6 lg:pt-6 mt-[130px] sm:mt-[120px] md:mt-[98px] lg:mt-[102px] xl:mt-[120px] flex flex-col gap-3">
         <div className="flex text-[#FF4668] gap-2 w-full justify-center align-middle text-[15px]">

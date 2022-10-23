@@ -1,33 +1,46 @@
 import React, { useState } from 'react'
 import Pizzacard from "./Pizzacard"
 import {data} from '../data/data.js'
+import {RiLeafLine} from 'react-icons/ri';
+import {TbMeat} from 'react-icons/tb';
 
-const Pizzacontainer = ({item}) => {
+const Pizzacontainer = () => {
   const [pizzas, setPizzas] = useState(data);
 
-  const filterType = (category) => {
+  const filterType = (type) => {
     setPizzas(
-      pizzas.filter((item) => {
-        return item.category === category;
-      })
-    );
-  };
-
-  const filterPrice = (price) => {
-    setPizzas(
-      pizzas.filter((item) => {
-        return item.price === price;
+      data.filter((item) => {
+        return item.type === type;
       })
     );
   };
 
   return (
-    <div className="flex flex-col px-6 sm:px-10 md:px-16 py-8 text-center bg-[#160007]">
-      <h1 className="text-6xl lg:text-8xl text-[#ffe6ea] mt-20 mb-24 innershadow">Our delicious pizzas...</h1>
-      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 xl:gap-x-8 gap-y-[164px] sm:gap-y-[144px] md:gap-y-[124px] xl:gap-y-[164px] pt-16'>
-        {pizzas.map((item, id) => (
-          <Pizzacard key={id} item={item} />
-        ))}
+    <div className="relative flex flex-col text-center bg-[#160007]">
+      <div className="px-6 sm:px-10 md:px-16 py-8">
+      <h1 className="text-6xl lg:text-8xl text-[#ffe6ea] mt-20 mb-[48px] innershadow">Our delicious pizzas...</h1>
+      <div className='z-[20] sticky w-[320px] top-[-1px] mx-auto bg-[#16000751] backdrop-blur pb-4 pt-5 px-3 flex flex-col justify-between rounded-bl-3xl rounded-br-3xl'>
+        <p className='text-[1.1em] text-[#ffe6ea] text-center'>Filter by type</p>
+        <div className='flex gap-2 mt-2 justify-center '>
+          <button
+            onClick={() => setPizzas(data)}
+            className='rounded-2xl px-3 py-1 hover:bg-[#FF4668] bg-[#ffe6eae2] border border-[#FF748E] hover:border-[#FF4668] text-[#FF4668] hover:text-white'>Show all
+          </button>
+          <button
+            onClick={() => filterType('meat')}
+            className='flex gap-1 rounded-2xl px-3 py-1 hover:bg-[#FF4668] bg-[#ffe6eae2] border border-[#FF748E] hover:border-[#FF4668] text-[#FF4668] hover:text-white'>Meat<TbMeat className="mt-1"/>
+          </button>
+          <button
+            onClick={() => filterType('veggie')}
+            className='flex gap-1 rounded-2xl px-3 py-1 hover:bg-[#FF4668] bg-[#ffe6eae2] border border-[#FF748E] hover:border-[#FF4668] text-[#FF4668] hover:text-white'>Veggie<RiLeafLine className="mt-1"/>
+          </button>
+        </div>
+      </div>
+        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-6 xl:gap-x-8 gap-y-[172px] sm:gap-y-[144px] md:gap-y-[124px] xl:gap-y-[172px] pt-16 mt-20'>
+          {pizzas.map((item, id) => (
+            <Pizzacard key={id} item={item} />
+          ))}
+        </div>
       </div>
     </div>
   )
