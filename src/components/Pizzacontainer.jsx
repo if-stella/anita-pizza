@@ -19,20 +19,20 @@ const Pizzacontainer = () => {
     <div className="relative flex flex-col text-center bg-[#160007]">
       <div className="px-6 sm:px-10 md:px-16 py-8">
       <h1 className="text-6xl lg:text-8xl text-[#ffe6ea] mt-20 mb-[48px] innershadow">Our delicious pizzas...</h1>
-      <div className='z-[20] sticky w-[320px] top-[-1px] mx-auto bg-[#16000751] backdrop-blur pb-4 pt-5 px-3 flex flex-col justify-between rounded-bl-3xl rounded-br-3xl'>
+      <div className='z-[20] sticky w-[327px] top-[-1px] mx-auto bg-[#16000751] backdrop-blur pb-4 pt-5 px-3 flex flex-col justify-between rounded-bl-3xl rounded-br-3xl'>
         <p className='text-[1.1em] text-[#ffe6ea] text-center'>Filter by type</p>
         <div className='flex gap-2 mt-2 justify-center '>
           <button
             onClick={() => setPizzas(data)}
-            className='rounded-2xl px-3 py-1 hover:bg-[#FF4668] bg-[#ffe6eae2] border border-[#FF748E] hover:border-[#FF4668] text-[#FF4668] hover:text-white'>Show all
+            className='fancyfont text-xl rounded-2xl px-3 pt-1 hover:bg-[#FF4668] bg-[#ffe6eaf0] border border-[#FF748E] hover:border-[#FF4668] text-[#FF4668] hover:text-white'>Show all
           </button>
           <button
             onClick={() => filterType('meat')}
-            className='flex gap-1 rounded-2xl px-3 py-1 hover:bg-[#FF4668] bg-[#ffe6eae2] border border-[#FF748E] hover:border-[#FF4668] text-[#FF4668] hover:text-white'>Meat<TbMeat className="mt-1"/>
+            className='fancyfont text-xl flex gap-1 rounded-2xl px-3 pt-1 hover:bg-[#FF4668] bg-[#ffe6eaf0] border border-[#FF748E] hover:border-[#FF4668] text-[#FF4668] hover:text-white'>Meat<TbMeat className="mt-[2px]"/>
           </button>
           <button
             onClick={() => filterType('veggie')}
-            className='flex gap-1 rounded-2xl px-3 py-1 hover:bg-[#FF4668] bg-[#ffe6eae2] border border-[#FF748E] hover:border-[#FF4668] text-[#FF4668] hover:text-white'>Veggie<RiLeafLine className="mt-1"/>
+            className='fancyfont text-xl flex gap-1 rounded-2xl px-3 pt-1 hover:bg-[#FF4668] bg-[#ffe6eaf0] border border-[#FF748E] hover:border-[#FF4668] text-[#FF4668] hover:text-white'>Veggie<RiLeafLine className="mt-[2px]"/>
           </button>
         </div>
       </div>

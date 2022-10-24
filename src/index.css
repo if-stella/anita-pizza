@@ -18,7 +18,11 @@ body {
 }
 
 h1,h2,h3 {
-font-family:'sunsetclub', cursive;
+  font-family:'sunsetclub', cursive;
+}
+
+.fancyfont {
+  font-family:'sunsetclub', cursive;
 }
 
 .pizzarollslow {
@@ -45,6 +49,19 @@ font-family:'sunsetclub', cursive;
 
 .innershadow {
   animation: flicker 1.5s infinite alternate;
+}
+
+.invertedcorner::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    top: -40px;
+    right:0;
+    height: 40px;
+    width: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0.5px 20px 0 0 #FF1842;
+    z-index: 10;
 }
 
 @keyframes flicker {
