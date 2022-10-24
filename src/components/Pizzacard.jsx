@@ -2,8 +2,8 @@ import React from 'react'
 
 const Pizzacard = ({item}) => {
   return (
-    <div className='pizzacard relative flex flex-col justify-between rounded-[20px] hover:shadow-xl hover:scale-105 duration-300 group'>
-    <p className="absolute bottom-0 right-0 px-3 py-2 rounded-tl-[20px] rounded-br-[20px] text-[#FFE8EC] font-bold bg-[#FF1842] lining-nums">{item.exactprice} €</p>
+    <div className='pizzacard relative flex flex-col justify-between rounded-[20px] hover:shadow-xl hover:scale-[1.02] duration-300 group'>
+    <div className="invertedcorner absolute bottom-[-6px] right-[-0.25px] px-3 py-2 rounded-tl-[20px] rounded-br-[20px] rounded-bl-[10px] rounded-tr-[4px] text-[#FFE8EC] font-bold bg-[#FF1842] z-[4]"><p className="relative lining-nums z-[15]">{item.exactprice} €</p></div>
     <div className="absolute z-[15] top-[-144px] sm:top-[-120px] md:top-[-100px] lg:top-[-103px] xl:top-[-130px] w-full">
       <img
         src={item.image}
@@ -18,7 +18,7 @@ const Pizzacard = ({item}) => {
         <div className="flex text-[#FF4668] gap-2 w-full justify-center align-middle text-[15px]">
           <p className="lining-nums">{item.calories} kcal</p>•
           <div className="mt-1">{item.icon}</div>•
-          <p>{item.tag}</p>
+          <p><strong>{item.tag}</strong></p>
 
         </div>
         <h2 className="text-3xl md:text-4xl text-[#FF1842]">{item.name}</h2>
