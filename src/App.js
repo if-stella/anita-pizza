@@ -1,3 +1,4 @@
+import CustomPizza from "./components/CustomPizza/CustomPizza";
 import Hero from "./components/Hero";
 import Pizzacontainer from "./components/Pizzacontainer";
 import Slimbanner from "./components/Slimbanner";
@@ -8,6 +9,7 @@ function App() {
     <Hero />
     <Pizzacontainer />
     <Slimbanner />
+    <CustomPizza />
     </>
   );
 }

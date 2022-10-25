@@ -1,0 +1,22 @@
+.pizzaoption {
+  background: #FFE8EC;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color:#FF1842;
+  border: 1px solid #FF1842
+}
+
+.pizzaoption:hover {
+  background: #FF1842;
+  color:#FFFFFF;
+}
+
+.pickles {
+  background-image:url("https://res.cloudinary.com/djlggawlm/image/upload/v1666695827/Anita%20Pizza/peckels_nzo7fv.png");
+}
+
+.mushrooms {
+  background-image:url("https://res.cloudinary.com/djlggawlm/image/upload/v1666697431/Anita%20Pizza/champignons_w2ojtp.png");
+}
