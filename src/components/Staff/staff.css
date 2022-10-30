@@ -1,0 +1,28 @@
+.reveal:hover {
+  opacity: 1;
+  -moz-transition: all 0.6s ease-out;
+  -o-transition: all 0.6s ease-out;
+  -webkit-transition: all 0.6s ease-out;
+  -ms-transition: all 0.6s ease-out;
+  transition: all 0.6s ease-out;
+}
+
+.reveal h1 {
+  color: #FF1842;
+}
+
+#reveal1 {
+  background-image: url("https://res.cloudinary.com/djlggawlm/image/upload/v1667163122/Anita%20Pizza/Frame_43_aaezpd.jpg");
+}
+
+#reveal1:hover {
+  background-image: url("https://res.cloudinary.com/djlggawlm/image/upload/v1667163123/Anita%20Pizza/Frame_40_vhw5jo.jpg");
+}
+
+#reveal2 {
+  background-image: url("https://res.cloudinary.com/djlggawlm/image/upload/v1667163122/Anita%20Pizza/Frame_39_bc9eyp.jpg");
+}
+
+#reveal2:hover {
+  background-image: url("https://res.cloudinary.com/djlggawlm/image/upload/v1667163123/Anita%20Pizza/Frame_42_hoybyj.jpg");
+}
