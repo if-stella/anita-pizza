@@ -8,7 +8,11 @@
 }
 
 .reveal h1 {
-  color: #FF1842;
+  color: #ffe6ea;
+}
+
+.reveal p {
+  color: #fff5f7;
 }
 
 #reveal1 {
