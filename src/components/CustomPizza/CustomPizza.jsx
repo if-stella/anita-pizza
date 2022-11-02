@@ -38,7 +38,7 @@ const CustomPizza = () => {
       <div className="w-full h-full bg-gradient-to-b from-[#160007] via-[#1600070a] to-[#160007] absolute left-0 top-0"></div>
       <div className="sauce absolute bottom-0 xs:bottom-[200px] sm:bottom-0 left-0 bg-cover xs:h-[96px] xs:w-[84px] sm:h-[148px] sm:w-[129px] md:h-[205px] md:w-[179px] lg:h-[242px] lg:w-[211px] xl:h-[302px] xl:w-[264px] z-[20]"></div>
       <div className="cutlery absolute top-0 xs:top-[310px] sm:top-[250px] md:top-[200px] xl:top-24 right-0 bg-cover xs:h-[229px] xs:w-[82px] sm:h-[314px] sm:w-[112px] md:h-[391px] md:w-[139px] lg:h-[510px] lg:w-[181px] xl:h-[647px] xl:w-[229px]"></div>
-      <div className="absolute w-full text-center mb-4 xs:mt-[80px] sm:mt-0 flex flex-col justify-center">
+      <div className="absolute w-full text-center mb-4 mt-[40px] xs:mt-[80px] sm:mt-0 flex flex-col justify-center">
         <h1 className="relative text-5xl sm:text-6xl 2xl:text-7xl text-[#FF1842] mb-1 z-[51]">Create your own Pizza!</h1>
         <div className="relative flex flex-wrap w-full justify-center gap-2 xs:gap-4 z-[50] max-w-[343px] xs:max-w-[400px] sm:max-w-[600px] mx-auto">
           <div onClick={toggleCheese} className={isCheese ? 'pizzaoptionselected' : 'pizzaoption'}>Cheese</div>
