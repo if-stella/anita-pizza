@@ -33,10 +33,20 @@ const CustomPizza = () => {
     setGreens(current => !current);
   };
 
+  const [isKetchup, setKetchup] = useState(false);
+  const toggleKetchup = () => {
+    setKetchup(current => !current);
+  };
+
   return (
     <div className="woodbg overflow-hidden w-full h-screen sm:h-[640px] lg:h-screen relative bg-cover py-4 xs:py-16">
       <div className="w-full h-full bg-gradient-to-b from-[#160007] via-[#1600070a] to-[#160007] absolute left-0 top-0"></div>
-      <div className="sauce absolute bottom-0 xs:bottom-[200px] sm:bottom-0 left-0 bg-cover xs:h-[96px] xs:w-[84px] sm:h-[148px] sm:w-[129px] md:h-[205px] md:w-[179px] lg:h-[242px] lg:w-[211px] xl:h-[302px] xl:w-[264px] z-[20]"></div>
+      <div onClick={toggleKetchup} className="sauce hover:cursor-pointer absolute bottom-0 xs:bottom-[300px] sm:bottom-0 left-7 sm:left-0 bg-cover xs:h-[96px] xs:w-[84px] sm:h-[148px] sm:w-[129px] md:h-[205px] md:w-[179px] lg:h-[242px] lg:w-[211px] xl:h-[302px] xl:w-[264px] z-[53]"></div>
+      <div className={isKetchup ? 'ketchupsplash absolute hidden xs:block w-full h-full z-[52]' : null}>
+        <div className= {isKetchup ? "splash1 absolute bg-cover w-[124px] h-[116px] sm:w-[248px] sm:h-[232px] lg:w-[497px] lg:h-[463px] left-[5%] top-[10%] md:left-[20%] md:top-[5%] lg:left-[9%] lg:top-[2%]" : null}></div>
+        <div className= {isKetchup ? "splash2 absolute bg-cover w-[97px] h-[73px] sm:w-[195px] sm:h-[145px] lg:w-[390px] lg:h-[289px] right-[18%] md:right-[3%] top-[45%] md:top-[50%] lg:right-[2%] lg:top-[45%]" : null}></div>
+        <div className= {isKetchup ? "splash3 absolute bg-cover w-[109px] h-[92px] sm:w-[218px] sm:h-[183px] lg:w-[436px] lg:h-[365px] right-[10%] top-[3%] md:right-[16%] md:top-[5%] lg:right-[4%] lg:top-0" : null}></div>
+      </div>
       <div className="cutlery absolute top-0 xs:top-[310px] sm:top-[250px] md:top-[200px] xl:top-24 right-0 bg-cover xs:h-[229px] xs:w-[82px] sm:h-[314px] sm:w-[112px] md:h-[391px] md:w-[139px] lg:h-[510px] lg:w-[181px] xl:h-[647px] xl:w-[229px]"></div>
       <div className="absolute w-full text-center mb-4 mt-[40px] xs:mt-[80px] sm:mt-0 flex flex-col justify-center">
         <h1 className="relative text-5xl sm:text-6xl 2xl:text-7xl text-[#FF1842] mb-1 z-[51]">Create your own Pizza!</h1>
