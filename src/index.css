@@ -52,6 +52,10 @@ h1,h2,h3 {
   animation: flicker 1.5s infinite alternate;
 }
 
+.flickeryellow {
+  animation: flickeryellow 1.5s infinite alternate;
+}
+
 .invertedcorner::before {
     content: "";
     position: absolute;
@@ -76,6 +80,23 @@ h1,h2,h3 {
     0 0 80px #FF1842,
     0 0 90px #FF1842,
     0 0 100px #FF1842;
+  }
+  20%, 24%, 55% {
+    text-shadow: none;
+  }
+}
+
+@keyframes flickeryellow {
+  0%, 18%, 22%, 25%, 53%, 57%, 100% {
+    text-shadow:
+    0 0 7px #FFF8D6,
+    0 0 10px #FFF8D6,
+    0 0 21px #FFF8D6,
+    0 0 60px #FFD71C,
+    0 0 70px #FFD71C,
+    0 0 80px #FFD71C,
+    0 0 90px #FFD71C,
+    0 0 100px #FFD71C;
   }
   20%, 24%, 55% {
     text-shadow: none;
